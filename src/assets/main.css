@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Kristi&family=Lexend+Deca:wght@100..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+ --font-deca: "Lexend Deca", sans-serif;
+ --font-kristi : "Kristi", cursive;
+
+}
