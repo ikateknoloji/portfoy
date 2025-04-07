@@ -27,7 +27,7 @@
 
 <script setup>
 import Sidebar from "@/components/sidebar/Sidebar.vue";
-import { ref } from "vue";
+import { ref, markRaw } from "vue";
 import { gsap } from "gsap";
 import Home from "@/components/Home.vue";
 import AboutMe from "@/components/AboutMe.vue";
@@ -39,12 +39,12 @@ import Collaboration from "@/components/Collaboration.vue";
 import { User, Briefcase, GraduationCap, Handshake, Mail, House } from 'lucide-vue-next';
 
 const sections = ref([
-  { name: "Anasayfa", component: Home, icon: House },
-  { name: "Benim Hakkımda", component: AboutMe, icon: User },
-  { name: "Deneyimlerim", component: Experience, icon: Briefcase },
-  { name: "Eğitim Hayatım", component: Education, icon: GraduationCap },
-  { name: "İş Birliklerimiz", component: Partners, icon: Handshake },
-  { name: "İş Birliği", component: Collaboration, icon: Mail },
+  { name: "Anasayfa", component: markRaw(Home), icon: House },
+  { name: "Benim Hakkımda", component: markRaw(AboutMe), icon: User },
+  { name: "Deneyimlerim", component: markRaw(Experience), icon: Briefcase },
+  { name: "Eğitim Hayatım", component: markRaw(Education), icon: GraduationCap },
+  { name: "İş Birliklerimiz", component: markRaw(Partners), icon: Handshake },
+  { name: "İş Birliği", component: markRaw(Collaboration), icon: Mail },
 ]);
 
 const carouselContainer = ref(null);
